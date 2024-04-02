@@ -18,11 +18,69 @@ header {
     position: sticky;
     top: 0;
 }
-header div.menu {
-    /* display: none; */
+#nav {
     position: absolute;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* display: none; */
+}
+
+#nav div.left {
+    
+    width: 30vw;
+    padding: 50px 35px;
     background-color: #fff;
+    overflow-y: scroll;
+}
+#nav div.left div.top {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding-bottom: 35px;
+}
+#nav div.left div.top button {
+    border: none;
+    background: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+}
+#nav div.left div.top button span  {
+    margin-left: 10px;
+    color: #000;
+    font-size: 17px;
+}
+#nav div.left div.top ul {
+    width: 100%;
+}
+#nav div.left div.top ul li {
+    font-size: 20px;
+    padding: 12px 16px 12px 0px;
+
+} 
+#nav div.left div.top ul li a {
+    color: #000;
+    font-weight: 600;
+} 
+#nav div.left div.top ul li a:hover {
+    border-bottom: 2px solid #000;
+}
+
+#nav div.left div.bottom {
+    padding: 40px 0px;
+}
+#nav div.left div.bottom ul {}
+#nav div.left div.bottom ul li {
+    line-height: 40px;
+}
+#nav div.left div.bottom ul li a {
+    color: grey;
+}
+
+#nav div.right {
+    width: 70vw;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 
@@ -119,6 +177,10 @@ div.headerMain  div.header-right ul li.nav-item a span.list-item {
     margin-right: 10px;
 
 }
+div.headerMain  div.header-right ul li.nav-item a i.fa-solid {
+    width: 16px;
+    height: 16px;
+}
 
 section#spotlight {
     background-image: url(https://in.louisvuitton.com/images/is/image//content/dam/lv/editorial-content/Homepage/2024/2024_march/central/Women_Nautical_WW_HP_Push_V0322_DI3.jpg?wid=2400);
@@ -174,20 +236,19 @@ padding: 50px 0px;
 }
 section#products div.product {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 section#products div.product div.item {
     width: 33%;
     
-
-  
 }
 section#products div.product div.item div.image {
     width: 100%;
-    height:661px;
+    height:580px;
 }
-section#products div.product div.item div.image img {
+section#products div.product div.item div.image a img {
     width: 100%;
     height: 100%;
 }
@@ -230,6 +291,7 @@ footer div.footer-middle div.wrapper {}
 footer div.footer-middle div.wrapper div.item {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 footer div.footer-middle div.wrapper div.item ul {
     width: 24%;
@@ -245,6 +307,7 @@ footer div.footer-middle div.wrapper div.item ul li h6 {
     font-weight: 400;
     line-height: 60px;
 }
+footer div.footer-middle div.wrapper div.item ul li p {}
 footer div.footer-middle div.wrapper div.item ul li p a {
     border-bottom: 1px solid#000;
 }
@@ -287,6 +350,9 @@ footer div.footer-bottom div.top div.left span  {
     display: flex;
     align-items: center;
 }
+footer div.footer-bottom div.top div.left span a  {
+    color: black;
+}
 
 footer div.footer-bottom div.top div.right {}
 footer div.footer-bottom div.top div.right span a {
@@ -319,3 +385,216 @@ footer h1 a {
     font-size: 20px;
     font-weight: 600;
 }
+
+
+
+/* responsive///// */
+
+@media all and (max-width :1440px) {
+    section#products div.product div.item div.image {
+        height: 540px;
+    }
+}
+
+
+@media all and (max-width :1280px) {
+    section#products div.product div.item div.image {
+        height: 470px;
+    }
+    footer div.footer-middle div.wrapper div.item ul {
+        width: 25%;
+    }
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 200px;
+    }
+
+    
+}
+
+
+@media all and (max-width :1080px) {
+    section#products div.product div.item div.image {
+        height: 400px;
+    }
+    section#products div.product div.item h3 {
+        font-size: 15px;
+    }
+    section#products div.product div.item p {
+        font-size: 15px;
+    }
+    section#products div.product div.item p a {
+        font-size: 13px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li h6 {
+        font-size: 10px;
+    }
+}
+
+
+@media all and (max-width :980px) {
+    div.headerMain  div.header-right ul li.nav-item a.first {
+        display: none;
+    }
+    section#products div.product div.item {
+        width: 32%; 
+    }
+    section#products div.product div.item div.image {
+        height: 375px;
+    }
+    section#products div.product div.item h3 {
+        font-size: 14px;
+    }
+    section#products div.product div.item p {
+        font-size: 14px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li h6 {
+        font-size: 12px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 180px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li a {
+        font-size: 12px;
+    }
+    footer div.footer-bottom div.bottom {
+        width: 90%;
+
+    }
+}
+
+
+@media all and (max-width :768px) {
+    div.headerMain div.header-left ul li.nav-item a span.list-item {
+        font-size: 13px;
+    }
+    div.headerMain div.header-right ul li.nav-item a span.list-item {
+        font-size: 13px;
+    }
+    section#products div.product div.item div.image {
+        width: 200;
+        height: 300px;
+    }
+    section#products div.product div.item h3 {
+        font-size: 10px;
+    }
+    section#products div.product div.item p a {
+        font-size: 10px;
+    }
+    footer div.footer-top div.wrapper p a {
+        font-size: 12px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 130px;
+    }
+}
+
+
+@media all and (max-width :640px) {
+    div.headerMain div.header-left ul li.nav-item a span.list-item {
+        display: none;
+    }
+    div.headerMain div.header-right ul li.nav-item a span.list-item {
+        display: none;
+    }
+    div.headerMain div.header-middle h1 a {
+        font-size: 25px;
+    }
+    section#products div.product {
+        flex-direction: column;
+    }
+    section#products div.product div.item {
+        width: 100%;
+        
+    }
+    section#products div.product div.item div.image {
+        width: 100%;
+        height:500px;
+    }
+    section#products div.product div.item h3 {
+        font-size: 17px;
+    }
+    section#products div.product div.item p a {
+        font-size: 17px;
+    }
+    section#products div.product div.item p {
+        margin-bottom: 20px;
+    }
+    footer div.footer-middle div.wrapper div.item ul {
+        width: 50%;
+    
+    }
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 200px;
+    }
+    footer div.footer-bottom div.top {
+        width: 100%;
+    }
+    
+}
+
+
+@media all and (max-width :540px) {
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 170px;
+        font-size: 11px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li h6 {
+        font-weight: 600;
+    }
+}
+
+
+@media all and (max-width :480px) {
+    footer div.footer-middle div.wrapper div.item ul li p {
+        width: 150px;
+        font-size: 10px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li p a {
+        font-size: 10px; 
+    }
+    footer div.footer-middle div.wrapper div.item ul li a {
+        font-size: 10px;
+    }
+    footer div.footer-middle div.wrapper div.item ul li {
+        font-size: 10px;
+    }
+    section#products div.product div.item h3 {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    section#products div.product div.item p a {
+        font-size: 14px;
+    }
+}
+
+
+@media all and (max-width :360px) {
+    div.headerMain  div.header-left {
+        width: 20%;
+    }
+    div.headerMain  div.header-right {
+        width: 10%;
+    }
+    div.headerMain div.header-middle h1 a {
+        font-size: 20px;
+    }
+    section#products div.product div.item div.image {
+        width: 100%;
+        height: 400px;
+    }
+    footer div.footer-middle div.wrapper div.item ul {
+        width: 100%;
+    }
+    footer div.footer-bottom div.top {
+        display:block;
+    }
+    footer div.footer-bottom div.top div.left {
+        margin-bottom: 20px;
+      }  
+}
+
+
+
+
+
+
