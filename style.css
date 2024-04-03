@@ -23,7 +23,7 @@ header {
     width: 100vw;
     height: 100vh;
     display: flex;
-    /* display: none; */
+    display: none;
 }
 
 #nav div.left {
@@ -180,6 +180,7 @@ div.headerMain  div.header-right ul li.nav-item a span.list-item {
 div.headerMain  div.header-right ul li.nav-item a i.fa-solid {
     width: 16px;
     height: 16px;
+    color: black;
 }
 
 section#spotlight {
@@ -252,18 +253,19 @@ section#products div.product div.item div.image a img {
     width: 100%;
     height: 100%;
 }
-section#products div.product div.item h3 {
-    margin-top: 15px;
+section#products div.product div.item h3.item-name {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 18px;
     color: black;
     font-weight: 400;
 }
-section#products div.product div.item p {
-    margin-top: 20px;
-}
-section#products div.product div.item p a {
+
+section#products div.product div.item a.section {
     color: black;
-    border-bottom: 1px solid #000
+    border-bottom: 1px solid #000;
+    margin-top: 30px;
+    
 
 }
 /* section products end///// */
@@ -392,14 +394,14 @@ footer h1 a {
 
 @media all and (max-width :1440px) {
     section#products div.product div.item div.image {
-        height: 540px;
+        height: 500px;
     }
 }
 
 
 @media all and (max-width :1280px) {
     section#products div.product div.item div.image {
-        height: 470px;
+        height: 400px;
     }
     footer div.footer-middle div.wrapper div.item ul {
         width: 25%;
@@ -416,13 +418,11 @@ footer h1 a {
     section#products div.product div.item div.image {
         height: 400px;
     }
-    section#products div.product div.item h3 {
+    section#products div.product div.item h3.item-name {
         font-size: 15px;
     }
-    section#products div.product div.item p {
-        font-size: 15px;
-    }
-    section#products div.product div.item p a {
+    
+    section#products div.product div.item a.section {
         font-size: 13px;
     }
     footer div.footer-middle div.wrapper div.item ul li h6 {
@@ -441,10 +441,10 @@ footer h1 a {
     section#products div.product div.item div.image {
         height: 375px;
     }
-    section#products div.product div.item h3 {
+    section#products div.product div.item h3.item-name {
         font-size: 14px;
     }
-    section#products div.product div.item p {
+    section#products div.product div.item a.section {
         font-size: 14px;
     }
     footer div.footer-middle div.wrapper div.item ul li h6 {
@@ -474,10 +474,10 @@ footer h1 a {
         width: 200;
         height: 300px;
     }
-    section#products div.product div.item h3 {
+    section#products div.product div.item h3.item-name {
         font-size: 10px;
     }
-    section#products div.product div.item p a {
+    section#products div.product div.item a.section {
         font-size: 10px;
     }
     footer div.footer-top div.wrapper p a {
@@ -490,6 +490,12 @@ footer h1 a {
 
 
 @media all and (max-width :640px) {
+    #nav div.left {
+        width: 100%;
+    }
+    #nav div.right {
+        display: none;
+    }
     div.headerMain div.header-left ul li.nav-item a span.list-item {
         display: none;
     }
@@ -503,21 +509,22 @@ footer h1 a {
         flex-direction: column;
     }
     section#products div.product div.item {
-        width: 100%;
+        width: 90%;
+        height: auto;
+        margin-bottom: 30px;
         
     }
     section#products div.product div.item div.image {
         width: 100%;
         height:500px;
     }
-    section#products div.product div.item h3 {
+    section#products div.product div.item h3.item-name {
         font-size: 17px;
     }
-    section#products div.product div.item p a {
+    section#products div.product div.item a.section {
         font-size: 17px;
-    }
-    section#products div.product div.item p {
         margin-bottom: 20px;
+
     }
     footer div.footer-middle div.wrapper div.item ul {
         width: 50%;
@@ -558,11 +565,14 @@ footer h1 a {
     footer div.footer-middle div.wrapper div.item ul li {
         font-size: 10px;
     }
-    section#products div.product div.item h3 {
+    section#products div.product div.item {
+        width: 100%;
+    }
+    section#products div.product div.item h3.item-name {
         font-size: 14px;
         font-weight: 600;
     }
-    section#products div.product div.item p a {
+    section#products div.product div.item a.section {
         font-size: 14px;
     }
 }

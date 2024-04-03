@@ -1,24 +1,17 @@
-const Menu = document.getElementById("menu")
-const MenuCategories = document.querySelectorAll(".menu")
-Menu.addEventListener("click",function() {
-    MenuCategories.forEach(function(menu) {
-        menu.style.display = "block"
-        console.log(MenuCategories)
+let Menu = document.getElementById("menu");
+let nav = document.getElementById("nav");
+let close = document.getElementById("close");
+let closeDiv =document.getElementById("closeDiv");
 
-    })
-    
-    alert("ok")
-})
+Menu.addEventListener('click', () => {
+    nav.style.display = 'flex';
+});
 
-// const Menu = document.getElementById("menu");
-// const MenuCategories = document.querySelectorAll(".menu");
 
-// Menu.addEventListener("click", function() {
-//     MenuCategories.forEach(function(category) {
-//         if (category.style.display === "none" || category.style.display === "") {
-//             category.style.display = "block";
-//         } else {
-//             category.style.display = "none";
-//         }
-//     });
-// });
+close.addEventListener('click', () => {
+    nav.style.display = 'none';
+});
+
+closeDiv.addEventListener('click', () => {
+    nav.style.display = 'none';
+});
