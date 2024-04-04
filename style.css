@@ -12,13 +12,18 @@
     max-width: 1280px;
 }
 header {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     height: 88px;
     z-index: 10;  
     position: sticky;
     top: 0;
+    left: 0;
 }
 #nav {
+    top: 0;
+    left: 0;
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -39,6 +44,8 @@ header {
     padding-bottom: 35px;
 }
 #nav div.left div.top button {
+    display: flex;
+    align-items: center;
     border: none;
     background: #fff;
     margin-bottom: 20px;
@@ -90,8 +97,6 @@ div.headerMain{
     align-items:center;
     justify-content: space-between;
     height: 88px;
-
-    
 }
 div.headerMain  div.header-left {
     width: 25%;
@@ -116,6 +121,7 @@ div.headerMain  div.header-left ul li.nav-item {
     margin-right: 20px; 
 }
 div.headerMain  div.header-left ul li.nav-item a {
+    display: block;
     display: flex;
     align-items: center;
     
@@ -131,7 +137,7 @@ div.headerMain  div.header-left ul li.nav-item a span.image {
     color: black;
 }
 div.headerMain  div.header-left ul li.nav-item a span.image img {
-    display: inline-block;
+    display: block;
     width: 100%;
     height: 100%;
 }
@@ -144,8 +150,11 @@ div.headerMain  div.header-left ul li.nav-item a span.list-item {
 div.headerMain  div.header-middle {
     /* width: 60%; */
     text-align: center;
+    display: flex;
+    align-items: center;
 }
 div.headerMain  div.header-middle h1 a {
+    display: block;
     color: #000;
 }
 div.headerMain  div.header-right {
@@ -165,6 +174,7 @@ div.headerMain div.header-right ul li.nav-item {
     margin-right: 15px;
 }
 div.headerMain  div.header-right ul li.nav-item a {
+    display: block;
     display: flex;
     align-items: center;
 }
@@ -217,16 +227,13 @@ section#spotlight div.content div.main h3 {
     font-weight: 500;
     font-size: 30px;
 }
-section#spotlight div.content div.main button {
+section#spotlight div.content div.main a {
+    display: block;
     color: #fff;
     background: #000;
     border: 2px solid #fff;
     border-radius: 30px;
     padding: 10px 30px;
-
-}
-section#spotlight div.content div.main button a {
-    color: #fff;
 }
 
 /* spotlight end/// */
@@ -250,6 +257,7 @@ section#products div.product div.item div.image {
     height:580px;
 }
 section#products div.product div.item div.image a img {
+    display: block;
     width: 100%;
     height: 100%;
 }
@@ -339,6 +347,7 @@ footer div.footer-bottom div.top div.left div.image-container {
     height: 16px;
 }
 footer div.footer-bottom div.top div.left div.image-container a {
+    display: block;
     width: 100%;
     height: 100%;
 }
@@ -353,6 +362,7 @@ footer div.footer-bottom div.top div.left span  {
     align-items: center;
 }
 footer div.footer-bottom div.top div.left span a  {
+    display: block;
     color: black;
 }
 
@@ -460,6 +470,13 @@ footer h1 a {
         width: 90%;
 
     }
+    footer div.footer-middle div.wrapper div.item ul li p {
+        /* width: 180px; */
+        font-size: 12px;
+    }
+    footer div.footer-middle div.wrapper div.item ul {
+        width: 50%;
+    }
 }
 
 
@@ -480,11 +497,23 @@ footer h1 a {
     section#products div.product div.item a.section {
         font-size: 10px;
     }
+    footer div.footer-middle div.wrapper div.item ul {
+        width: 50%;
+    
+    }
+    footer div.footer-middle div.wrapper div.item ul li h6 {
+        font-weight: 600;
+    }
     footer div.footer-top div.wrapper p a {
-        font-size: 12px;
+        font-size: 13px;
     }
     footer div.footer-middle div.wrapper div.item ul li p {
         width: 130px;
+    }
+    div.headerMain div.header-middle h1 a {
+        display: block;
+        color: #000;
+        font-size: 27px;
     }
 }
 
@@ -548,11 +577,9 @@ footer h1 a {
     footer div.footer-middle div.wrapper div.item ul li h6 {
         font-weight: 600;
     }
-}
 
 
-@media all and (max-width :480px) {
-    footer div.footer-middle div.wrapper div.item ul li p {
+     footer div.footer-middle div.wrapper div.item ul li p {
         width: 150px;
         font-size: 10px;
     }
@@ -569,17 +596,25 @@ footer h1 a {
         width: 100%;
     }
     section#products div.product div.item h3.item-name {
-        font-size: 14px;
+        font-size: 17px;
         font-weight: 600;
     }
     section#products div.product div.item a.section {
-        font-size: 14px;
+        font-size: 17px;
     }
 }
 
 
-@media all and (max-width :360px) {
+@media all and (max-width :480px) {
+   
     
+
+
+    div.headerMain{
+
+        display: flex;
+        align-items:center;
+    }
     div.headerMain  div.header-left {
         width: 20%;
     }
@@ -591,7 +626,13 @@ footer h1 a {
     }
     section#products div.product div.item div.image {
         width: 100%;
-        height: 400px;
+        height: 450px;
+    }
+    section#products div.product div.item h3.item-name {
+        font-size: 13px;
+    }
+    section#products div.product div.item a.section {
+        font-size: 13px;
     }
     footer div.footer-middle div.wrapper div.item ul {
         width: 100%;
@@ -602,6 +643,16 @@ footer h1 a {
     footer div.footer-bottom div.top div.left {
         margin-bottom: 20px;
       }  
+}
+
+
+@media all and (max-width :360px) {
+    section#products div.product div.item div.image {
+        width: 100%;
+        height: 300px;
+    }
+
+   
 }
 
 
